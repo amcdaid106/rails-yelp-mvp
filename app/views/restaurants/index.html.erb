@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+
+      <h1>Our restaurants</h1>
+      <% @restaurants.each_with_index do |restaurant, index| %>
+      <p><%= index + 1 %>) <%= link_to "#{restaurant.name}", restaurant_path(restaurant[:id]) %></p>
+      <% end %>
+      <hr>
+      <p><%= link_to "Add a restaurant", new_restaurant_path %></p>
+
+
+    </div>
+  </div>
+</div>
+
